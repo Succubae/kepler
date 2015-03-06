@@ -14,7 +14,12 @@ func treatIncomingComm(data gsc.GSIC_data, addr net.Addr, ln *net.UDPConn) {
 	i := 0
 	for i < 10 {
 		Printf("Handling communication #%s\n", data.UniqueID)
-		ln.WriteTo([]byte("Tu es une pute."), addr)
+		a, err := ln.WriteTo([]byte("Tu es une pute."), addr)
+		if err != nil {
+			Printf("Err: %#v", err)
+			os.Exit(-1)
+		}
+		Printf("A: %d\n", a)
 		time.Sleep(1 * time.Second)
 		i++
 	}
