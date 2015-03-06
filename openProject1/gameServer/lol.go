@@ -10,10 +10,11 @@ import (
 	"time"
 )
 
-func treatIncomingComm(data gsc.GSIC_data) {
+func treatIncomingComm(data gsc.GSIC_data, addr net.Addr, ln *net.UDPConn) {
 	i := 0
 	for i < 10 {
 		Printf("Handling communication #%s\n", data.UniqueID)
+		ln.WriteTo([]byte("Tu es une pute."), addr)
 		time.Sleep(1 * time.Second)
 		i++
 	}
@@ -45,21 +46,19 @@ func main() {
 	ln := openCommLink("udp4", ":38735")
 
 	for {
-		size, err := ln.Read(b)
+		size, addr, err := ln.ReadFrom(b)
 		if err != nil {
 			Println("Error Read")
 		}
 
 		if size != 0 {
-			remote := ln.RemoteAddr()
-			net.
-				Printf("remote : %#v\n", remote)
+			Printf("remote : %#v\n", addr)
 			dec := json.NewDecoder(strings.NewReader(string(b[:])))
 			dec.Decode(&data)
 
 			Printf("Received %d bytes saying: \"%s\"\n", size, b)
 			Printf("And the struct now contains:\n\t %#v\n", data)
-			go treatIncomingComm(data)
+			go treatIncomingComm(data, addr, ln)
 		}
 
 	}
