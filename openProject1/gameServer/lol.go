@@ -2,14 +2,13 @@ package main
 
 import (
 	"encoding/json"
-	// "errors"
 	. "fmt"
 	"net"
 	gsc "openProject1/graphic_server_communication"
 	"os"
 	"strconv"
 	"strings"
-	"time"
+	// "time"
 )
 
 func check_error(err error) {
@@ -30,11 +29,8 @@ func getClientReturnAddr(addr net.Addr) net.Addr {
 
 func treatIncomingComm(data gsc.GSIC_data, addr net.Addr, ln *net.UDPConn) {
 	Printf("Handling communication #%s started\n", data.UniqueID)
-	for i := 0; i < 10; i++ {
-		addr := getClientReturnAddr(addr)
-		ln.WriteTo([]byte("{\"ID\": \"987ZYX321\", \"Class\": \"SALOPESALOPESALOPE\", \"md5\":\"123MD5\"}"), addr)
-		time.Sleep(1 * time.Second)
-	}
+	addr = getClientReturnAddr(addr)
+	ln.WriteTo([]byte("{\"ID\": \"987ZYX321\", \"Class\": \"SALOPESALOPESALOPE\", \"md5\":\"123MD5\"}"), addr)
 	Printf("Handling communication #%s ended\n", data.UniqueID)
 }
 
@@ -57,12 +53,15 @@ func openCommLink(protocol, port string) *net.UDPConn {
 func main() {
 	Println("Server starting...")
 
-	b := make([]byte, 1024)
 	data := gsc.GSIC_data{}
 
 	ln := openCommLink("udp4", ":38735")
 
 	for {
+		b := make([]byte, 1024) //we'll have to extend it
+		for i := 0; i < 1024; i++ {
+			b[i] = 0
+		}
 		size, addr, err := ln.ReadFrom(b)
 		if err != nil {
 			Println("Error Read")
@@ -76,6 +75,5 @@ func main() {
 			Printf("And the struct now contains:\n\t %#v\n", data)
 			go treatIncomingComm(data, addr, ln)
 		}
-
 	}
 }
