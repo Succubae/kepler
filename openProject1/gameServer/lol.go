@@ -2,28 +2,40 @@ package main
 
 import (
 	"encoding/json"
+	// "errors"
 	. "fmt"
 	"net"
 	gsc "openProject1/graphic_server_communication"
 	"os"
+	"strconv"
 	"strings"
 	"time"
 )
 
-func treatIncomingComm(data gsc.GSIC_data, addr net.Addr, ln *net.UDPConn) {
-	i := 0
-	for i < 10 {
-		Printf("Handling communication #%s\n", data.UniqueID)
-		a, err := ln.WriteTo([]byte("Tu es une pute."), addr)
-		if err != nil {
-			Printf("Err: %#v", err)
-			os.Exit(-1)
-		}
-		Printf("A: %d\n", a)
-		time.Sleep(1 * time.Second)
-		i++
+func check_error(err error) {
+	if err != nil {
+		Printf("Err: %#v", err)
+		os.Exit(-1)
 	}
-	Printf("Handling done\n")
+}
+
+func getClientReturnAddr(addr net.Addr) net.Addr {
+	port, err := strconv.ParseInt(addr.String()[strings.Index(addr.String(), ":")+1:], 10, 32)
+	check_error(err)
+	address := addr.String()[:strings.Index(addr.String(), ":")+1]
+	addr, err = net.ResolveUDPAddr("udp4", Sprint(address, port+1))
+	check_error(err)
+	return addr
+}
+
+func treatIncomingComm(data gsc.GSIC_data, addr net.Addr, ln *net.UDPConn) {
+	Printf("Handling communication #%s started\n", data.UniqueID)
+	for i := 0; i < 10; i++ {
+		addr := getClientReturnAddr(addr)
+		ln.WriteTo([]byte("{\"ID\": \"987ZYX321\", \"Class\": \"SALOPESALOPESALOPE\", \"md5\":\"123MD5\"}"), addr)
+		time.Sleep(1 * time.Second)
+	}
+	Printf("Handling communication #%s ended\n", data.UniqueID)
 }
 
 func openCommLink(protocol, port string) *net.UDPConn {
@@ -57,7 +69,6 @@ func main() {
 		}
 
 		if size != 0 {
-			Printf("remote : %#v\n", addr)
 			dec := json.NewDecoder(strings.NewReader(string(b[:])))
 			dec.Decode(&data)
 
