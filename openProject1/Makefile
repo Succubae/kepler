@@ -11,10 +11,10 @@ EVENT = build openProject1/eventManager
 GO = go
 
 all:
-	$(GO) $(SERV)
-	$(GO) $(CLIENT)
 	$(GO) $(COMM)
 	$(GO) $(EVENT)
+	$(GO) $(CLIENT)
+	$(GO) $(SERV)
 
 serv: all
 	gameServer

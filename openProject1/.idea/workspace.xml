@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1fc07c9b-923d-4f10-87b0-b58e393574d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eventManager/eventManager.go" afterPath="$PROJECT_DIR$/eventManager/eventManager.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gameServer/server.go" afterPath="$PROJECT_DIR$/gameServer/server.go" />
-    </list>
+    <list default="true" id="1fc07c9b-923d-4f10-87b0-b58e393574d8" name="Default" comment="" />
     <ignored path="openProject1.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -422,12 +419,12 @@
       <workItem from="1426151544088" duration="574000" />
       <workItem from="1426152130969" duration="12384000" />
       <workItem from="1426178881488" duration="549000" />
-      <workItem from="1426237151676" duration="7890000" />
+      <workItem from="1426237151676" duration="8154000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24779000" />
+    <option name="totallyTimeSpent" value="25043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="815" y="22" width="1746" height="1329" extended-state="0" />
