@@ -1,10 +1,5 @@
 package graphic_server_communication
 
-import (
-// "encoding/json"
-// "fmt"
-)
-
 type GSIC_data struct {
 	UniqueID   string `json:"ID"`
 	Timestamp  string `json:"timestamp"`
@@ -31,4 +26,3 @@ type GSOC_data struct {
 	Md5        string `json:"md5"`
 }
 
-//echo -n '{"ID": "123ID456", "Class": "PUTEPUTEPUTEPUTEPUTEPUTE", "md5":"987MD5"}'  | nc -4u -w0 localhost 38735
