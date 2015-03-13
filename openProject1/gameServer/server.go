@@ -90,8 +90,8 @@ func main() {
 
 	received := make(chan bool, 1)
 
-//	ln := openCommLink("udp4", ":38735")
-	ln := openCommLink("udp4", ":1500")
+	ln := openCommLink("udp4", ":38735")
+//	ln := openCommLink("udp4", ":1500")
 
 	b := make([]byte, 1024) //we'll have to extend it
 
