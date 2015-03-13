@@ -40,7 +40,7 @@
   </component>
   <component name="CppTools.Loader" reportImplicitCastToBool="false" reportNameReferencedOnce="false" version="3" compilerSelect="AUTO" />
   <component name="IdProvider" IDEtalkID="A74F2B53DAD7D258178920C6F333A3EE" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="go sdk" project-jdk-type="CppSdk">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

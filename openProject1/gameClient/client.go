@@ -22,7 +22,11 @@ func readFromStdin(textFromStdin chan string) {
 	reader := bufio.NewReader(os.Stdin)
 	text, err := reader.ReadString('\n')
 	check_error(err)
-	textFromStdin <- text
+	if len(text) > 1 {
+		textFromStdin <- text[:len(text) - 1]
+	} else {
+		textFromStdin <- text
+	}
 }
 
 func readFromServer(textFromServer chan gsc.GSIC_data, ln *net.UDPConn) {
@@ -76,7 +80,7 @@ Loop:
 		select {
 		case textStdin := <-textFromStdin:
 			{
-				if textStdin == "exit\n" {
+				if textStdin == "exit" {
 					Println("I'm out.")
 					break Loop
 				}
