@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc07c9b-923d-4f10-87b0-b58e393574d8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gameServer/serverTCP.go" afterPath="$PROJECT_DIR$/gameServer/serverTCP.go" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="openProject1.iws" />
@@ -60,11 +61,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="serverTCP.go" pinned="false" current-in-tab="false">
+          <file leaf-file-name="serverTCP.go" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/gameServer/serverTCP.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-3.892857" vertical-offset="1327" max-vertical-offset="2145">
-                  <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+                <state vertical-scroll-proportion="0.54156476" vertical-offset="427" max-vertical-offset="2160">
+                  <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
                   <folding />
                 </state>
               </provider>
@@ -73,17 +74,17 @@
           <file leaf-file-name="clientTCP.go" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/gameClient/clientTCP.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-10.178572" vertical-offset="930" max-vertical-offset="1725">
+                <state vertical-scroll-proportion="-10.589286" vertical-offset="907" max-vertical-offset="1725">
                   <caret line="100" column="16" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Makefile" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Makefile">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.49041712" vertical-offset="0" max-vertical-offset="887">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
                   <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
                   <folding />
                 </state>
@@ -450,12 +451,12 @@
       <workItem from="1426151544088" duration="574000" />
       <workItem from="1426152130969" duration="12384000" />
       <workItem from="1426178881488" duration="549000" />
-      <workItem from="1426237151676" duration="15731000" />
+      <workItem from="1426237151676" duration="15874000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32620000" />
+    <option name="totallyTimeSpent" value="32763000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="815" y="22" width="1746" height="1352" extended-state="0" />
@@ -627,14 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gameClient/clientTCP.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.178572" vertical-offset="930" max-vertical-offset="1725">
-          <caret line="100" column="16" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gameClient/client.go.bak">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="695" max-vertical-offset="1650">
@@ -652,14 +645,6 @@
       </provider>
       <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gameServer/serverTCP.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.892857" vertical-offset="1327" max-vertical-offset="2145">
-          <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eventManager/eventManager.go">
@@ -680,8 +665,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49041712" vertical-offset="0" max-vertical-offset="887">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameClient/clientTCP.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.589286" vertical-offset="907" max-vertical-offset="1725">
+          <caret line="100" column="16" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gameServer/serverTCP.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54156476" vertical-offset="427" max-vertical-offset="2160">
+          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
           <folding />
         </state>
       </provider>
