@@ -28,13 +28,15 @@ func retrieveGames() []gameInfo {
 	return currentGames
 }
 
-func retrieveGamesFromMongoDB() []gameInfo {
+func retrieveGamesFromMongoDB(mongo ServInfo) []gameInfo {
 	currentGames := []gameInfo{
 		{123456789, false, time.Now().String()},
 		{987654321, false, time.Monday.String()},
 		{789456123, true, time.Thursday.String()},
 		{321654987, true, time.Friday.String()}}
-
+	//mongo.MgoSession.SetSafe(&mgo.Safe{})
+	collection := mongo.MgoSession.DB("games").C("foo")
+	fmt.Printf("%#v\n", collection)
 	return currentGames
 }
 
@@ -52,7 +54,7 @@ func ParseGamesForEvents(simulation bool, mongo ServInfo) {
 	if simulation {
 		games = retrieveGames()
 	} else {
-		games = retrieveGamesFromMongoDB()
+		games = retrieveGamesFromMongoDB(mongo)
 	}
 
 	for i, elem := range games {

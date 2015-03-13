@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fc07c9b-923d-4f10-87b0-b58e393574d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eventManager/eventManager.go" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gameServer/lol.go" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gameClient/client.go" afterPath="$PROJECT_DIR$/gameClient/client.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eventManager/eventManager.go" afterPath="$PROJECT_DIR$/eventManager/eventManager.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gameServer/server.go" afterPath="$PROJECT_DIR$/gameServer/server.go" />
     </list>
     <ignored path="openProject1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,8 +34,8 @@
           <file leaf-file-name="eventManager.go" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/eventManager/eventManager.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1095">
-                  <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1125">
+                  <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -68,8 +64,8 @@
           <file leaf-file-name="server.go" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/gameServer/server.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.24819028" vertical-offset="465" max-vertical-offset="1980">
-                  <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+                <state vertical-scroll-proportion="1.6324786" vertical-offset="1013" max-vertical-offset="1995">
+                  <caret line="93" column="39" selection-start-line="93" selection-start-column="39" selection-end-line="93" selection-end-column="39" />
                   <folding />
                 </state>
               </provider>
@@ -102,8 +98,8 @@
           <file leaf-file-name="eventManager.go" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/eventManager/eventManager.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7346939" vertical-offset="60" max-vertical-offset="1095">
-                  <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+                <state vertical-scroll-proportion="2.0040486" vertical-offset="60" max-vertical-offset="1125">
+                  <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
                   <folding />
                 </state>
               </provider>
@@ -123,8 +119,8 @@
         <option value="$PROJECT_DIR$/gameClient/client.go" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/gameServer/server.go" />
         <option value="$PROJECT_DIR$/eventManager/eventManager.go" />
+        <option value="$PROJECT_DIR$/gameServer/server.go" />
       </list>
     </option>
   </component>
@@ -426,12 +422,12 @@
       <workItem from="1426151544088" duration="574000" />
       <workItem from="1426152130969" duration="12384000" />
       <workItem from="1426178881488" duration="549000" />
-      <workItem from="1426237151676" duration="4315000" />
+      <workItem from="1426237151676" duration="7890000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21204000" />
+    <option name="totallyTimeSpent" value="24779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="815" y="22" width="1746" height="1329" extended-state="0" />
@@ -441,7 +437,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18755053" sideWeight="0.49972543" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.78011316" sideWeight="0.49972543" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -629,16 +625,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gameServer/server.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24819028" vertical-offset="465" max-vertical-offset="1980">
-          <caret line="47" column="63" selection-start-line="47" selection-start-column="63" selection-end-line="47" selection-end-column="63" />
+        <state vertical-scroll-proportion="1.6324786" vertical-offset="1013" max-vertical-offset="1995">
+          <caret line="93" column="39" selection-start-line="93" selection-start-column="39" selection-end-line="93" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/eventManager/eventManager.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7346939" vertical-offset="60" max-vertical-offset="1095">
-          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+        <state vertical-scroll-proportion="2.0040486" vertical-offset="60" max-vertical-offset="1125">
+          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
           <folding />
         </state>
       </provider>

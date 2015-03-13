@@ -90,7 +90,8 @@ func main() {
 
 	received := make(chan bool, 1)
 
-	ln := openCommLink("udp4", ":38735")
+//	ln := openCommLink("udp4", ":38735")
+	ln := openCommLink("udp4", ":1500")
 
 	b := make([]byte, 1024) //we'll have to extend it
 
@@ -119,7 +120,7 @@ func main() {
 		//fmt.Printf("elapsed time: %s\n", elapsed)
 		if elapsed > time.Second * 5 {
 			t = time.Now()
-			go em.ParseGamesForEvents(true, mongo)
+			go em.ParseGamesForEvents(false, mongo)
 		}
 
 	}
