@@ -56,6 +56,7 @@ func	readFromServer(textFromServer chan gsc.GSIC_data, conn net.Conn) {
 	data := gsc.GSIC_data{}
 
 	size, err := conn.Read(b)
+	//check if err is EOF and don't exit.
 	check_error(err)
 
 	if size != 0 {
