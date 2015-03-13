@@ -97,7 +97,7 @@ func main() {
 
 	t := time.Now()
 
-	mongo := em.ServInfo{"mongodb://user:pass@server.addr.com/db_name", nil}
+	mongo := em.ServInfo{"mongodb://kepler:kepler@127.0.0.1/db_name", nil}
 
 	go receiveDataFromClients(b, ln, data, received)
 

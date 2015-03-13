@@ -67,3 +67,5 @@ func ParseGamesForEvents(simulation bool, mongo ServInfo) {
 		fmt.Println("");
 	}
 }
+
+//https://docs.compose.io/languages/golang.html
