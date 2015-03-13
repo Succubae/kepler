@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+    "io"
 	"encoding/json"
 	"fmt"
 	"net"
@@ -57,7 +58,9 @@ func	readFromServer(textFromServer chan gsc.GSIC_data, conn net.Conn) {
 
 	size, err := conn.Read(b)
 	//check if err is EOF and don't exit.
-	check_error(err)
+    if err != io.EOF {
+        check_error(err)
+    }
 
 	if size != 0 {
 		dec := json.NewDecoder(strings.NewReader(string(b[:])))
