@@ -27,3 +27,7 @@ push:
 
 pull:
 	git add -u ; git commit -m "update" ; git pull origin master
+	$(GO) $(COMM)
+	$(GO) $(EVENT)
+	$(GO) $(CLIENT)
+	$(GO) $(SERV)
