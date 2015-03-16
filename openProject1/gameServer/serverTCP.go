@@ -2,6 +2,8 @@ package main
 
 import (
 	"bufio"
+    "net/http"
+    "io"
 	"encoding/json"
 	"fmt"
 	"net"
@@ -16,6 +18,8 @@ const (
 	HOST = "localhost"
 	PORT = "38735"
 	TYPE = "tcp4"
+    PUB_PATH = "/Volumes/Data/nfs/zfs-student-3/users/2013/mweibel/Dropbox/rendu/goproj/src/openProject1/pub"
+    PUB_PORT = ":38734"
 )
 
 func color(this_color, str string) string {
@@ -57,7 +61,9 @@ func	readFromServer(textFromServer chan gsc.GSIC_data, conn net.Conn) {
 
 	size, err := conn.Read(b)
 	//check if err is EOF and don't exit.
-	check_error(err)
+    if err != io.EOF {
+        check_error(err)
+    }
 
 	if size != 0 {
 		dec := json.NewDecoder(strings.NewReader(string(b[:])))
@@ -115,8 +121,20 @@ func	AcceptFromServer(ln net.Listener) {
 	}
 }
 
+func    ServeCrossdomainXML() {
+    //a refaire en websocket
+    http.HandleFunc("/pub/", func(w http.ResponseWriter, r *http.Request) {
+     http.ServeFile(w, r, r.URL.Path[1:])
+    })
+    http.ListenAndServe(PUB_PORT, nil)
+
+
+}
+
 func	main() {
 	fmt.Printf("Starting server...\n")
+    fmt.Println("Starting crossdomain.xml file server")
+    go ServeCrossdomainXML()
 	fmt.Printf("Waiting for connections...\n")
 	l, err := net.Listen(TYPE, HOST+":"+PORT)
 	check_error(err)
